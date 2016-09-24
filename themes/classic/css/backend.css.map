@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACI,oBAAE;EACE,WAAW,EAAE,UAAU;EACvB,YAAY,EAAE,GAAG;AAGrB,2BAAS;EACL,aAAa,EAAE,UAAU;AAE7B,sBAAK;EACD,YAAY,EAAE,GAAG;EACjB,2BAAK;IACD,WAAW,EAAE,IAAI",
+"sources": ["../scss/backend.scss"],
+"names": [],
+"file": "backend.css"
+}

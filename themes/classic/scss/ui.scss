@@ -1,0 +1,68 @@
+#msg-box {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    margin-left: -200px;
+    width: 400px;
+    text-align: center;
+    z-index: 9999999;
+}
+.section-view{
+    position: relative;
+}
+.list-view{
+    .list-view-item{
+        position: relative;
+        margin-top: 15px;
+        .admin_edit_func{
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+    }
+}
+.item-view{
+    position: relative;
+    .admin_edit_func{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+}
+.site_position{
+    position: relative;
+}
+.modal-body form{
+    padding: 0 15px;
+}
+#adminmenu {
+    background: white;
+    color: #333333;
+    border-top: 1px solid #ccc;
+    a{
+        color: #333333;
+        font-size: 14px;
+    }
+    .btn-toolbar{
+        margin:0px;
+    }
+    .layer{
+        background: #fafafa;
+        border-radius: 0 10px 0 0;
+        border-right: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+        cursor: pointer;
+        padding: 5px 10px;
+        position: absolute;
+        top: -30px;
+        width: 100px;
+        color: red;
+        font-size: 14px;
+    }
+    .show_position{
+        margin-top: 8px;
+    }   
+}
+#adminmenu.inactive{
+    bottom: -50px;
+    }

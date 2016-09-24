@@ -1,0 +1,16 @@
+.sectionsForBlock{
+    li{
+        border-left: 1px dotted;
+        padding-left: 5px;
+
+    }
+    .checkbox{
+        border-bottom: 1px dotted;
+    }
+    > ul {
+        padding-left: 0px;
+        > li {
+            border-left: none;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.show_admin_position_panel {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: #a0211a;
+  color: #FFF;
+  padding: 0 2px;
+  cursor: pointer;
+  border: solid 2px #FFF;
+  z-index: 100;
+  display: none; }
+
+.site_block_item {
+  position: relative; }
+
+.show_block_info {
+  position: absolute;
+  top: 0px;
+  right: 2px;
+  background: #73A804;
+  font-size: 12px;
+  color: #FFF;
+  padding: 0 5px;
+  cursor: pointer;
+  border: solid 2px #FFF;
+  box-shadow: 1px 1px 1px #000;
+  z-index: 100;
+  display: none; }
+
+/*# sourceMappingURL=blocksEdit.css.map */

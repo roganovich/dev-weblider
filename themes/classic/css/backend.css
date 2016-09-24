@@ -1,0 +1,11 @@
+.sectionsForBlock li {
+  border-left: 1px dotted;
+  padding-left: 5px; }
+.sectionsForBlock .checkbox {
+  border-bottom: 1px dotted; }
+.sectionsForBlock > ul {
+  padding-left: 0px; }
+  .sectionsForBlock > ul > li {
+    border-left: none; }
+
+/*# sourceMappingURL=backend.css.map */
