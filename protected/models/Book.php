@@ -114,4 +114,17 @@ class Book extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+        
+        public function behaviors(){
+            return array(
+                'materialHistoryBehavior' => array(
+                    'class' => 'MaterialHistory',
+                    'attributesTrack' => array('id','title','price','author','thumb','anons','text','updated_at'),//if null track all
+                    'attributesNotTrack' => array('id','created_at'),//if null nothing is excluded
+                    'actionsTrack' => array('update','delete','putThumb','deleteThumb'),//if null track all
+                    'actionsNotTrack' => array('index','create'),//if null nothing is excluded
+                ),
+            );
+        }
+        
 }
