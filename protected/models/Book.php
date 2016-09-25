@@ -118,7 +118,7 @@ class Book extends CActiveRecord
         public function behaviors(){
             return array(
                 'materialHistoryBehavior' => array(
-                    'class' => 'MaterialHistory',
+                    'class' => 'MaterialHistoryBehavior',
                     'attributesTrack' => array('id','title','price','author','thumb','anons','text','updated_at'),//if null track all
                     'attributesNotTrack' => array('id','created_at'),//if null nothing is excluded
                     'actionsTrack' => array('update','delete','putThumb','deleteThumb'),//if null track all

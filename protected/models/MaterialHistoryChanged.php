@@ -1,23 +1,23 @@
 <?php
 
 /**
- * This is the model class for table "MaterialHistory".
+ * This is the model class for table "MaterialHistoryChanged".
  *
- * The followings are the available columns in table 'MaterialHistory':
+ * The followings are the available columns in table 'MaterialHistoryChanged':
  * @property integer $id
- * @property integer $user_id
- * @property string $material_type
- * @property integer $matarial_id
- * @property integer $created_at
+ * @property integer $matarial_history_id
+ * @property string $name
+ * @property string $value
+ * @property string $old_value
  */
-class MaterialHistory extends CActiveRecord
+class MaterialHistoryChanged extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'MaterialHistory';
+		return 'MaterialHistoryChanged';
 	}
 
 	/**
@@ -28,12 +28,12 @@ class MaterialHistory extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('user_id, matarial_id', 'required'),
-			array('user_id, matarial_id, created_at', 'numerical', 'integerOnly'=>true),
-			array('material_type', 'length', 'max'=>255),
+			array('matarial_history_id', 'required'),
+			array('matarial_history_id', 'numerical', 'integerOnly'=>true),
+			array('name, value, old_value', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, user_id, material_type, matarial_id, created_at', 'safe', 'on'=>'search'),
+			array('id, matarial_history_id, name, value, old_value', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -45,7 +45,8 @@ class MaterialHistory extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-		);
+                    'matarial_history_id' => array(self::BELONGS_TO, 'MaterialHistory', 'id'),
+                );
 	}
 
 	/**
@@ -55,10 +56,10 @@ class MaterialHistory extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'user_id' => 'User',
-			'material_type' => 'Material Type',
-			'matarial_id' => 'Matarial',
-			'created_at' => 'Created At',
+			'matarial_history_id' => 'Matarial History',
+			'name' => 'Name',
+			'value' => 'Value',
+			'old_value' => 'Old Value',
 		);
 	}
 
@@ -81,10 +82,10 @@ class MaterialHistory extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('user_id',$this->user_id);
-		$criteria->compare('material_type',$this->material_type,true);
-		$criteria->compare('matarial_id',$this->matarial_id);
-		$criteria->compare('created_at',$this->created_at);
+		$criteria->compare('matarial_history_id',$this->matarial_history_id);
+		$criteria->compare('name',$this->name,true);
+		$criteria->compare('value',$this->value,true);
+		$criteria->compare('old_value',$this->old_value,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -95,7 +96,7 @@ class MaterialHistory extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return MaterialHistory the static model class
+	 * @return MaterialHistoryChanged the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

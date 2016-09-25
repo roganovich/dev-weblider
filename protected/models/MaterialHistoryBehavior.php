@@ -1,5 +1,5 @@
 <?php
-class MaterialHistory extends CActiveRecordBehavior 
+class MaterialHistoryBehavior extends CActiveRecordBehavior 
 {
    public $actionsTrack = array();
    public $actionsNotTrack = array();
